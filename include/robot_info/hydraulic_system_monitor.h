@@ -4,10 +4,10 @@
 
 class HydraulicSystemMonitor{
   public:
-    
-  public:
-    std::string hydraulic_oil_temperature = "45 C";
-    std::string hydraulic_oil_tank_fill_level = "100%";
-    std::string hydraulic_oil_pressure = "250 bar";
+    HydraulicSystemMonitor();
+    void set_monitor_values();
+    std::string hydraulic_oil_temperature;
+    std::string hydraulic_oil_tank_fill_level;
+    std::string hydraulic_oil_pressure;
 };
 

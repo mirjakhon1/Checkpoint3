@@ -3,3 +3,6 @@ std_msgs/String serial_num
 std_msgs/String ip_address
 std_msgs/String firmware_ver
 std_msgs/String max_payload
+std_msgs/String hydraulic_oil_temperature
+std_msgs/String hydraulic_oil_tank_fill_level
+std_msgs/String hydraulic_oil_pressure

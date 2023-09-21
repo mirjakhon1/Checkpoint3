@@ -105,7 +105,7 @@ generate_messages(
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
  INCLUDE_DIRS include
- LIBRARIES robot_info agv_robot_info
+ LIBRARIES robot_info agv_robot_info hydraulic_system_monitor
 #  CATKIN_DEPENDS robotinfo_msgs roscpp
  DEPENDS message_runtime
 )

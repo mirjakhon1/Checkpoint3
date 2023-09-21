@@ -14,5 +14,8 @@ void AGVRobotInfo::publish_data(){
   robot_info_msg.ip_address.data = "245.524";
   robot_info_msg.firmware_ver.data = "21";
   robot_info_msg.max_payload.data = maximum_payload;
+  robot_info_msg.hydraulic_oil_temperature.data = hydro_monitor.hydraulic_oil_temperature;
+  robot_info_msg.hydraulic_oil_tank_fill_level.data = hydro_monitor.hydraulic_oil_tank_fill_level;
+  robot_info_msg.hydraulic_oil_pressure.data = hydro_monitor.hydraulic_oil_pressure;
   pub.publish(robot_info_msg);
 }

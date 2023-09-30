@@ -9,16 +9,17 @@ using namespace std;
 RobotInfo::RobotInfo(ros::NodeHandle *nh){
   pub = nh->advertise<robot_info::custom>("/robot_info", 1000);
   ROS_INFO("/robot_info topic is being published...");
-  robot_description = "Robot is described";
-  serial_number = "Serial #32";
-  ip_address = "122.232.21";
-  firmware_version = "v2.1";
+  robot_description = "robot_description: Mir100";
+  serial_number = "serial_number: 567A359";
+  ip_address = "ip_address: 169.254.5.180";
+  firmware_version = "firmware_version: 3.5.8";
 };
 
 void RobotInfo::publish_data(){
-  ROS_INFO("Robot description: %s ", robot_description.c_str());
-  ROS_INFO("Serial number: %s", serial_number.c_str());
-  ROS_INFO("IP Address: %s", ip_address.c_str());
-  ROS_INFO("Firmware version: %s", firmware_version.c_str());
+  robot_msg.robot_desc = robot_description;
+  robot_msg.serial_num = serial_number;
+  robot_msg.ip_address = ip_address;
+  robot_msg.firmware_ver = firmware_version;
+  pub.publish(robot_msg);
 }
 

@@ -11,7 +11,10 @@ int main(int argc, char** argv){
 
   ros::NodeHandle node_hanlde;
   RobotInfo rf = RobotInfo(&node_hanlde);
-  ros::spin();
+  while(ros::ok()){
+    rf.publish_data();
+    ros::spinOnce();
+  }
 //   while(ros::ok()){
 //     rf.publish_data();
 //     ros::spinOnce();
